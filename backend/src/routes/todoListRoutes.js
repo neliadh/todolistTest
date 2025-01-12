@@ -63,4 +63,8 @@ router.route('/delete/:id').get(function (req, res) {
     });
 });
 
+router.route('/health').get(function (req, res) {
+  res.json('Healthy');
+});
+
 module.exports = router;
