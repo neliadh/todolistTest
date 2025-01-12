@@ -32,6 +32,6 @@ app.use(bodyParser.json());
 app.use(basePath, todoListRoutes);
 
 // Execute App
-app.listen(port, () => {
+app.listen(port, '0.0.0.0' ,() => {
   console.log('TodoList Backend running on Port: ',port);
 });
