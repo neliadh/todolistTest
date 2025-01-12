@@ -30,7 +30,11 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(basePath, todoListRoutes);
-
+app.get('/health', (req, res) => {
+  res.status(200).json({
+    status: 'healthy'
+  });
+});
 // Execute App
 app.listen(port, '0.0.0.0' ,() => {
   console.log('TodoList Backend running on Port: ',port);
