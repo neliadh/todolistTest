@@ -29,6 +29,7 @@ app.use(express.static('public'));
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(basePath, todoListRoutes);
 
 // Execute App
 app.listen(port, () => {
