@@ -5,7 +5,7 @@ services:
     ports:
      - "27017:27017"
   backend:
-    build: ./backend/
+    image: pivoinetheone/arinf-backend:1.1
     ports:
       - "6200:6200"
     volumes:
@@ -14,7 +14,7 @@ services:
     depends_on:
       - mongodb
   frontend:
-    build: ./react-frontend/
+    image: pivoinetheone/arinf-frontend:1.1
     ports:
       - "80:3000"
     volumes:
