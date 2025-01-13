@@ -14,7 +14,7 @@ services:
     depends_on:
       - mongodb
   frontend:
-    image: pivoinetheone/arinf-frontend:1.1
+    image: pivoinetheone/arinf-frontend:1.3
     ports:
       - "80:3000"
     volumes:
