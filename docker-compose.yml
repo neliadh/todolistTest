@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   mongodb:
     image: "mongo:3.2"
@@ -7,7 +7,7 @@ services:
   backend:
     build: ./backend/
     ports:
-      - "6200:6200"
+      - "80:6200"
     volumes:
       - ./backend:/usr/src/backend/app
       - "/usr/src/backend/app/node_modules"
@@ -16,7 +16,7 @@ services:
   frontend:
     build: ./react-frontend/
     ports:
-      - "80:3000"
+      - "3000:3000"
     volumes:
       - ./react-frontend:/usr/src/frontend/app
       - "/usr/src/frontend/app/node_modules"
